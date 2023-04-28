@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Farouche</title>
+    <title>Register Event - Farouche</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
@@ -16,31 +16,26 @@
         <div class="container"><a class="navbar-brand logo txt-clr" href="index.html">Farouche</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active txt-clr" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link txt-clr" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link txt-clr" href="aboutus.html">About us</a></li>
                     <li class="nav-item"><a class="nav-link txt-clr" href="eventUpdates.html">Events Updates</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main class="portfolio-block website gradient">
-        <section class="portfolio-block block-intro">
-            <div class="container mt-5">
-                <div class="avatar mt-5" style="background-image: url(&quot;assets/img/avatars/avatar2.jpg&quot;);"></div>
-                <div class="about-me txt-clr mt-5">
-                    <p>Hello! Everyone Welcome to&nbsp;<strong>Farouche 2K23</strong></p>
-                </div>
-            </div>
-            <a href="events.html" class="btn btn-primary mt-5 mb-3" type="button">Sports Events</a><br>
-            <a href="events.html" class="btn btn-primary" type="button">Cultural Events</a>
-        </section>
-        <section class="portfolio-block photography mt-5">
+    <main class="page contact-page">
+        <section class="portfolio-block contact">
             <div class="container">
-                <div class="row g-0">
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" src="assets/img/nature/fest1.JPG"></a></div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" src="assets/img/nature/fest2.jpg"></a></div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" src="assets/img/nature/fest3.jpg"></a></div>
+                <div class="heading">
+                    <h2>Register Here</h2>
                 </div>
+                <form>
+                    <div class="mb-3"><label class="form-label" for="name">Your Name</label><input class="form-control item" name="name" type="text" id="name"></div>
+                    <div class="mb-3"><label class="form-label" for="usn">USN</label><input class="form-control item" name="usn" type="text" id="usn"></div>
+                    <div class="mb-3"><label class="form-label" for="email">Email</label><input class="form-control item" name="email" type="email" id="email"></div>
+                    <div class="mb-3"><label class="form-label" for="event">Event</label><input class="form-control item" name="event" value="Cricket" type="text" id="message" disabled></input></div>
+                    <div class="mb-3"><button class="btn btnclr btn-lg d-block w-100" type="submit">Register</button></div>
+                </form>
             </div>
         </section>
     </main>

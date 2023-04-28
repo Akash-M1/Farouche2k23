@@ -5,6 +5,39 @@
 .txt-clr{
   color: #ffd700;
 }
+.btnclr{
+  color: #ffd700;
+  background-color: #023002;
+}
+
+.btnclr:hover {
+  background-color: #ffd700;
+  color: #023002;
+}
+
+.img-about{
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+table {
+	display: table;
+}
+table tr {
+	display: table-cell;
+}
+table tr td {
+	display: block;
+}
+
+.pos-img{
+  position: absolute; 
+  top: 10%; 
+  left: 60%;
+}
+
+
 
 .pika-single {
   z-index: 9999;
