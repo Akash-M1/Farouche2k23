@@ -4,7 +4,7 @@
 `npm install`
 
 ## Create (.env file) and following fields
-Mongoose_URL, PORT (port to be used)
+Mongoose_URL (MongoDB connection URL), PORT (port to be used)
 
 ## Start the Project
 `npm start`
