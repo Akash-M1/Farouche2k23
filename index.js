@@ -10,7 +10,7 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
 const app = express();
-const PORT = 8999;
+const PORT = process.env.PORT | 8999;
 
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
