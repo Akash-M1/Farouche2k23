@@ -34,7 +34,15 @@ table tr td {
 .pos-img{
   position: absolute; 
   top: 10%; 
-  left: 60%;
+  left: 65%;
+}
+
+.admin-student-head{
+  color: #418B6B;
+}
+
+.admin-student-head:hover{
+  color: #ffd700;
 }
 
 

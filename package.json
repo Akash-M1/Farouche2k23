@@ -1,0 +1,34 @@
+{
+  "name": "farouche2k23",
+  "version": "1.0.0",
+  "description": "A website for hostel fest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akash-M1/Farouche2k23.git"
+  },
+  "author": "AkashM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akash-M1/Farouche2k23/issues"
+  },
+  "homepage": "https://github.com/Akash-M1/Farouche2k23#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.1.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/css/pikaday.min.css">
+    <%- style %>
+</head>
+
+<body>
+    <%- include('_header') %>
+    <%- body %>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast align-items-center text-bg-warning border-0 " role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="tbody">
+                    Hello, world! This is a toast message.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToastd" class="toast align-items-center text-bg-danger border-0 " role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="tbodyd">
+                    Hello, world! This is a toast message.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <%- include('_footer') %>    
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/pikaday.min.js"></script>
+    <script src="/js/theme.js"></script>
+    <script>
+        <% if (locals.flash && flash.success && flash.success.length>0) { %>
+            document.getElementById("tbody").innerHTML = "<%= flash.success %>";
+            bootstrap.Toast.getOrCreateInstance(document.getElementById('liveToast')).show()
+        <% } else if (locals.flash && flash.error && flash.error.length>0) { %>
+            document.getElementById("tbodyd").innerHTML = "<%= flash.error %>";
+            bootstrap.Toast.getOrCreateInstance(document.getElementById('liveToastd')).show()
+        <% } %>
+    </script>
+    <%- script %>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<main class="page projets-page">
+    <section class="portfolio-block project-no-images">
+        <div class="container">
+            <% for( let index = 0; index < array.length; index++ ) { %>
+                <div class="heading project-card-no-image">
+                    <h2><a href="/<%= route %>/<%= array[index] %>" class="admin-student-head"><%= array[index] %></a></h2>
+                </div>
+            <% } %>
+        </div>
+    </section>
+</main>
