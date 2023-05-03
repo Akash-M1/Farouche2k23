@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
     <link rel="stylesheet" href="/fonts/ionicons.min.css">
     <link rel="stylesheet" href="/css/pikaday.min.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <%- style %>
 </head>
 
@@ -36,9 +39,12 @@
         </div>
     </div>
     <%- include('_footer') %>    
+    <canvas id="canvas-webgl" class="p-canvas-webgl"></canvas>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
+    
     <script src="/js/pikaday.min.js"></script>
     <script src="/js/theme.js"></script>
+    <script src="./js/app.js"></script>
     <script>
         <% if (locals.flash && flash.success && flash.success.length>0) { %>
             document.getElementById("tbody").innerHTML = "<%= flash.success %>";
@@ -49,6 +55,7 @@
         <% } %>
     </script>
     <%- script %>
+    
 </body>
 
 </html>

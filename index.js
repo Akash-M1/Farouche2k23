@@ -10,8 +10,9 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
 const app = express();
-const PORT = process.env.PORT | 8999;
-
+console.log(process.env.PORT)
+const PORT = process.env.PORT || 8999;
+console.log(PORT)
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 app.set('layout extractStyles',true);
