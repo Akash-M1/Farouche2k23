@@ -11,7 +11,7 @@
  }
  body{
   background: rgb(217,164,56);
-background: linear-gradient(354deg, rgba(217,164,56,1) 41%, rgba(215,221,219,1) 62%);
+  background: linear-gradient(354deg, rgba(217,164,56,1) 41%, rgba(215,221,219,1) 62%);
  }
 .txt-clr{
   color: #eca20f;
