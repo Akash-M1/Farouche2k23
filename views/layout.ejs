@@ -15,7 +15,29 @@
     <%- style %>
 </head>
 
-<body>
+<body onload="delete_preloader()">
+    <div id="loader">
+        <div class="preloader">
+            
+        </div>
+    </div>
+    <script>
+        console.clear();
+        function show(){
+            alert("The form is closed! See u at another event!");
+        }
+        function delete_preloader() {
+    var preloader = document.getElementById("loader");
+    return preloader.parentNode.removeChild(preloader)
+        }
+        function show_preloader() {
+    var preloader = document.getElementById("loader");
+      preloader.style.display='flex';
+}
+
+
+    </script>
+    
     <%- include('_header') %>
     <%- body %>
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
