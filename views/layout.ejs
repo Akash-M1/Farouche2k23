@@ -15,12 +15,12 @@
     <%- style %>
 </head>
 
-<body onload="delete_preloader()">
-    <div id="loader">
+<body>
+    <!-- <div id="loader">
         <div class="preloader">
             
         </div>
-    </div>
+    </div> -->
     <script>
         console.clear();
         function show(){
@@ -59,7 +59,7 @@
                 <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
         </div>
-    </div>
+    </div>   
     <%- include('_footer') %>    
     <canvas id="canvas-webgl" class="p-canvas-webgl"></canvas>
     <script src="/bootstrap/js/bootstrap.min.js"></script>

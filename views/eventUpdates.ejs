@@ -3,7 +3,7 @@
         <div class="container">
             <% if (heading[1] == "Completed") { %>
                 <div class="work-experience group">
-                    <div class="heading">
+                    <div class="heading mt-5">
                         <h2 class="text-center"><%= heading[0] %> Events <%= heading[1] %></h2>
                     </div>
                     <% if (locals.comingSoon) { %>
@@ -32,11 +32,11 @@
             <% } %> 
             <% if (heading[1] == "On Going") { %>
                 <div class="education group">
-                    <div class="heading">
+                    <div class="heading mt-5 mb-5">
                         <h2 class="text-center"><%= heading[0] %> Events <%= heading[1] %></h2>
                     </div>
                     <% if (locals.comingSoon) { %>
-                        <div class="item">
+                        <div class="item" style="margin-bottom: 65%;">
                             <div class="row">
                                 <div class="col-md-6">
                                     <h3>Coming Soon!!</h3>
