@@ -2,6 +2,7 @@ const Roles = require('../models/roles');
 
 exports.aboutUsRender = async (req,res)=>{
     const role = await Roles.distinct('role');
+    swap(role,6,7);
     return res.render('type_tempelate',{
         title:"Farouche - About Us",
         array:role,
@@ -19,3 +20,11 @@ exports.rolesPageRender = async (req,res)=>{
     })
 }
 
+function swap(role,i,j){
+    if(i==j){
+        return;
+    }
+    let temp = role[i];
+    role[i] = role[j];
+    role[j] = temp;
+}
