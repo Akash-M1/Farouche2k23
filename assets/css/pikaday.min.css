@@ -20,22 +20,51 @@
 }
 .btnclr{
   border: 1px solid black;
-  color: black;
-  transition-duration: 0.25s;
+  color: #eca20f;
+  transition-duration: 1s;
   border-radius: 22px;
   padding: 2%;
+  background-color:black;
+  transition: all .2s ease-in-out;
+  /* transition: all; */
  
+ 
+}
+.btnclr1{
+  border: 1px solid black;
+  color: #eca20f;
+  transition-duration: 0.21s;
+  border-radius: 22px;
+  padding: 2%;
+  background-color:transparent;
+  
+  /* transition: all; */
+ 
+ 
+}
+.btnclr1:hover{
+  border: 1px solid black;
+  color: #eca20f;
+  transition-duration: 0.21s;
+  border-radius: 22px;
+  padding: 2%;
+  transform: scale(1.1);
  
 }
 a{
   text-decoration: none;
 }
 .btnclr:hover {
-  /* background-color: #041a12; */
-  color: #eca20f;
-  transition-timing-function:ease-in ;
   transform: scale(1.1);
+  background-color:black;
+  
+  
  
+}
+input{
+  background-color: transparent;
+  outline: none;
+  border-bottom: 1px solid black;
 }
 
 #scl-links{

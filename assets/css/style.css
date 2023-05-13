@@ -2,7 +2,7 @@
 
  .p-canvas-webgl {
 	 position: fixed;
-	 z-index: 1;
+	 z-index: -4;
 	 top: 0;
 	 left: 0;
 }
@@ -20,17 +20,14 @@
 	 font-family: 'Homenaje', sans-serif;
 	 text-align: center;
 }
- .p-summary h1 {
-	 margin: 0 0 0.1em;
-	 font-size: 18vh;
-	 font-weight: 400;
+.nav_head{
+	color:#eca20f ;
 }
- .p-summary p {
-	 margin: 0;
-	 font-size: 3vh;
-	 text-transform: uppercase;
-	 letter-spacing: 0.1em;
+.nav_head:hover{
+	border: 1px solid #fff;
+	color:#fff;
 }
- .p-summary a {
-	 color: #fff;
+input:focus{
+	border: none;
+	border-bottom: 2px solid black;
 }
