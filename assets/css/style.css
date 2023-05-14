@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Homenaje');
 
+.section-one {
+	height: 100vh;
+  }
+  
+  .section-two {
+	overflow: auto;
+	height: calc(100vh);
+  }
+
  .p-canvas-webgl {
 	 position: fixed;
 	 z-index: -4;
