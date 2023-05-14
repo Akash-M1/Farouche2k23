@@ -7,10 +7,21 @@ const bodyParser = require('body-parser');
 const connectFlash = require('connect-flash');
 const connectFlashMW = require('./middlewares/connectFlasMW');
 const session = require('express-session');
+const MongoDBStore = require('connect-mongodb-session')(session);
 const cookieParser = require('cookie-parser');
 
 const app = express();
 const PORT = process.env.PORT || 8999;
+
+const store = new MongoDBStore({
+    uri:process.env.Mongoose_URL,
+    collection:"ToastSession"
+});
+
+store.on('error',(err)=>{
+    console.log("Error using Mongo Store")
+})
+
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 app.set('layout extractStyles',true);
@@ -26,7 +37,8 @@ app.use(session({
         maxAge:(1000*24*60)
     },
     resave:false,
-    saveUninitialized:false
+    saveUninitialized:false,
+    store:store
 }));
 
 app.use(expressLayout);
