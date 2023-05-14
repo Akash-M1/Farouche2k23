@@ -2,7 +2,7 @@ const EventUpdates = require('../models/event_updates');
 
 exports.eventUpdatesTypeRender = async (req,res)=>{
     try {
-        const eventStatusType = await EventUpdates.distinct('status'); 
+        const eventStatusType = ['Completed','On Going'];
         return res.render('type_tempelate',{
             title:"Farouche - Event Updates",
             array:eventStatusType,
@@ -39,7 +39,7 @@ exports.eventUpdatesStatusRender = async (req,res)=>{
 
 exports.eventUpdatesRender = async (req,res)=>{
     try {
-        if((await EventUpdates.distinct('status')).includes(req.params.status)  && (await EventUpdates.distinct('type')).includes(req.params.type)){
+        if(((['Completed','On Going'].includes(req.params.status))||(await EventUpdates.distinct('status')).includes(req.params.status))  && ((['Sport','Cultural'].includes(req.params.type)) || (await EventUpdates.distinct('type')).includes(req.params.type))){
             const events = await EventUpdates.find({status:req.params.status,type:req.params.type});
             if(events && events.length>0){
                 return res.render('eventUpdates',{
