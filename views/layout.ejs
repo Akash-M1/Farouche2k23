@@ -27,15 +27,13 @@
             alert("The form is closed! See u at another event!");
         }
         function delete_preloader() {
-    var preloader = document.getElementById("loader");
-    return preloader.parentNode.removeChild(preloader)
+            var preloader = document.getElementById("loader");
+            return preloader.parentNode.removeChild(preloader)
+                }
+                function show_preloader() {
+            var preloader = document.getElementById("loader");
+            preloader.style.display='flex';
         }
-        function show_preloader() {
-    var preloader = document.getElementById("loader");
-      preloader.style.display='flex';
-}
-
-
     </script>
     
     <%- include('_header') %>
