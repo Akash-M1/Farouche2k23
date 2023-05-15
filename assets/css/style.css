@@ -6,7 +6,7 @@
   
   .section-two {
 	overflow: auto;
-	height: calc(100vh);
+	height: auto;
   }
 
  .p-canvas-webgl {
