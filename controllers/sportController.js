@@ -19,7 +19,7 @@ exports.sportsRender = async (req,res)=>{
     try {
         const type = req.params.type;
         const sports = await Sports.find({type:type});
-        if(sports){
+        if(sports.length>0){
             return res.render('events',{
                 title:"Farouche - Events",
                 array:sports,

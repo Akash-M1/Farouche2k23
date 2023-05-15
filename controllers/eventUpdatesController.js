@@ -17,8 +17,9 @@ exports.eventUpdatesTypeRender = async (req,res)=>{
 exports.eventUpdatesStatusRender = async (req,res)=>{
     try {
         const status = req.params.status;
+        const eventStatusType = ['Completed','On Going'];
         const eventTypes = ['Sport','Cultural']
-        if(eventTypes && eventTypes.length>0){
+        if(eventStatusType.includes(status)){
             return res.render('type_tempelate',{
                 title:"Farouche - Event Updates",
                 array:eventTypes,

@@ -19,7 +19,7 @@ exports.culturalRender = async (req,res)=>{
     try {
         const type = req.params.type;
         const cultural = await Cultural.find({type:type});
-        if(cultural){
+        if(cultural.length>0){
             return res.render('events',{
                 title:"Farouche - Events",
                 array:cultural,

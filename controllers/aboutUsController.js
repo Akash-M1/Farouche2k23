@@ -12,12 +12,19 @@ exports.aboutUsRender = async (req,res)=>{
 
 exports.rolesPageRender = async (req,res)=>{
     const roleType = req.params.role;
-    const aboutUs = await Roles.find({role:roleType});
-    return res.render('aboutus',{
-        title:"Farouche - About US",
-        array:aboutUs,
-        heading:roleType
-    })
+    if((await Roles.distinct('role')).includes(roleType)){
+        const aboutUs = await Roles.find({role:roleType});
+        return res.render('aboutus',{
+            title:"Farouche - About US",
+            array:aboutUs,
+            heading:roleType
+        });
+    }
+    else{
+        return res.render('pageNotFound',{
+            title:"Error Page- Farouche"
+        });
+    }
 }
 
 function swap(role,i,j){
