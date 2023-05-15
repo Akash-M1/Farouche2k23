@@ -17,7 +17,11 @@
                 <div class="mb-3"><label class="form-label" for="hostel">Hostel</label><input  class="form-control item" name="hostel" type="text" id="hostel"></div>
                 <div class="mb-3"><label class="form-label" for="event">Event</label><input  class="form-control item" name="event" value="<%= name %>" type="text" id="message" readonly></input></div>
                 <% if (team == "TRUE") { %>
-                    <div class="mb-3"><label class="form-label" for="team_size">Team Size</label><input  class="form-control item" name="team_size" type="text" id="team_size" placeholder="Team Size Should Be <%= team_size %>"></div>
+                    <% if (isNaN(team_size)) { %>
+                        <div class="mb-3"><label class="form-label" for="team_size">Team Size</label><input  class="form-control item" name="team_size" type="text" id="team_size" placeholder="Team Size Should Be <%= team_size %>"></div>
+                    <% } else {%>
+                        <div class="mb-3"><label class="form-label" for="team_size">Team Size</label><input  class="form-control item" name="team_size" type="text" id="team_size" value="<%= team_size %>"  readonly></div>
+                    <% } %>
                     <div class="mb-3"><label class="form-label" for="team_members">Team Members Name</label><input  class="form-control item" name="team_members1" type="text" id="team_members" placeholder="names separated by comma"></div>
                 <% } %>
                 <div class="mb-3"><button class="btn btnclr btn-lg d-block w-100" type="submit">Register</button></div>

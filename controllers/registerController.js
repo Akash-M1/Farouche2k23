@@ -60,7 +60,7 @@ exports.createRegistration = async (req,res)=>{
             req.body.team_members = req.body.team_members1.split(',');
         }
         if(req.body.team_members1 && req.body.team_members.length != req.body.team_size){
-            req.flash('error','Registration Error - Team Size should be same as that of Entered Players');
+            req.flash('error','Registration Error - Number of Players Entered Should be equal to that of Team Size');
             return res.redirect('back');
         }
         if(req.body.team_members1 && !await teamSizeCheck(req.query.event_type,req.body)){
